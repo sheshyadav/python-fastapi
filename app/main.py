@@ -1,7 +1,8 @@
 from fastapi import FastAPI
+from app.core.config import settings
 
 # Setup the root application.
-app = FastAPI(title="Chat Application API", version="1.0.0")
+app = FastAPI(title=settings.APP_NAME, version=settings.APP_VERSION)
 
 
 @app.get("/")
